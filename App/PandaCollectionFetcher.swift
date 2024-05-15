@@ -2,9 +2,11 @@
 See the License.txt file for this sample’s licensing information.
 */
 
+/* The PandaCollectionFetcher called in MemeCreatorApp, fetches data using PandaCollection and the response data is stored in the MemeCreatorApp state in a 'fetcher' variable.*/
 import SwiftUI
 
 class PandaCollectionFetcher: ObservableObject {
+    /* Wrappers and variables for data*/
     @Published var imageData = PandaCollection(sample: [Panda.defaultPanda])
     @Published var currentPanda = Panda.defaultPanda
     

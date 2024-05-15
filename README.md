@@ -17,3 +17,14 @@ In this walkthrough, you’ll learn how asynchronous data fetching works, and ho
 ## Running the Sample Code Project
 
 Before running this sample on a physical device, select a Development Team under the Signing & Capabilities section in the project editor.
+
+This app is packed using the swift package manager.
+
+The App directory houses:
+
+Assets.xcassets: Images and JSON objects for storage.
+LoadableImage: A child view that loads an image from the retrieved data.
+MemeCreator: A parent view that loads LoadableImage views, establishes state for the view, and attaches all this to a body variable that can be passed around.
+MemeCreatorApp: Entry point for the app, establishes global state and a body variable that contains the UI.
+Panda: A simple file that establishes a Panda struct using the Codable protocol, contains the endpoint URL, stores in a 'sample' variable.
+PandaCollectionFetcher: A class that uses the ObservableObject protocol that's called in MemeCreatorApp, fetches data using PandaCollection and the response data is stored in the MemeCreatorApp state in a 'fetcher' variable.*/
